@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Training - Day 27</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2E86C1; }
+        .section { margin-bottom: 20px; }
+        .time { font-weight: bold; color: #117A65; }
+    </style>
+</head>
+<body>
+
+<h1>Day 27 - 30 July 2024</h1>
+<h2>Java Development Industrial Training</h2>
+
+<div class="section">
+    <p class="time">08:00 AM - 10:00 AM</p>
+    <p>We explored <strong>CallableStatement</strong> to work with stored procedures in MySQL. This allows Java programs to call predefined database routines for complex operations.</p>
+    <pre>
+import java.sql.*;
+class CallableExample {
+    public static void main(String[] args) {
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "password");
+            CallableStatement cs = con.prepareCall("{call getEmployee(?)}");
+            cs.setInt(1, 101);
+            ResultSet rs = cs.executeQuery();
+            while(rs.next()) {
+                System.out.println(rs.getString("name"));
+            }
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+    </pre>
+</div>
+
+<div class="section">
+    <p class="time">10:00 AM - 12:00 PM</p>
+    <p>I created a stored procedure in MySQL and tested calling it from Java. This method is efficient for large projects as it centralizes logic inside the database.</p>
+</div>
+
+<div class="section">
+    <h2>Conclusion</h2>
+    <p>CallableStatement is an excellent way to execute complex SQL logic. Tomorrow, we will move on to project integration.</p>
+</div>
+
+</body>
+</html>
