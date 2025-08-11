@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Training - Day 26</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2E86C1; }
+        .section { margin-bottom: 20px; }
+        .time { font-weight: bold; color: #117A65; }
+    </style>
+</head>
+<body>
+
+<h1>Day 26 - 29 July 2024</h1>
+<h2>Java Development Industrial Training</h2>
+
+<div class="section">
+    <p class="time">08:00 AM - 10:00 AM</p>
+    <p>Today we focused on <strong>Java Database Connectivity (JDBC) PreparedStatement</strong>. We learned why using PreparedStatement is safer and more efficient than Statement, especially in preventing SQL injection attacks.</p>
+    <p>We created a program that inserts and retrieves employee data from a MySQL database using PreparedStatement.</p>
+    <pre>
+import java.sql.*;
+class InsertExample {
+    public static void main(String[] args) {
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "password");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO employees(name, dept) VALUES(?, ?)");
+            ps.setString(1, "Amit");
+            ps.setString(2, "IT");
+            ps.executeUpdate();
+            System.out.println("Record inserted successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+    </pre>
+</div>
+
+<div class="section">
+    <p class="time">10:00 AM - 12:00 PM</p>
+    <p>I practiced updating and deleting records using PreparedStatement. We also discussed parameter indexing, batch processing, and transaction management using <code>commit()</code> and <code>rollback()</code>.</p>
+</div>
+
+<div class="section">
+    <h2>Conclusion</h2>
+    <p>PreparedStatement provides both performance benefits and enhanced security. Tomorrow, we will look into CallableStatement for executing stored procedures.</p>
+</div>
+
+</body>
+</html>
