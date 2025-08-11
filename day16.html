@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Training - Day 16</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2E86C1; }
+        .section { margin-bottom: 20px; }
+        .time { font-weight: bold; color: #117A65; }
+    </style>
+</head>
+<body>
+
+<h1>Day 16 - 15 July 2024</h1>
+<h2>Java Development Industrial Training</h2>
+
+<div class="section">
+    <p class="time">08:00 AM - 10:00 AM</p>
+    <p>Today’s session began with an in-depth discussion on <strong>Java Interfaces</strong> and how they differ from Abstract Classes. 
+    I learned how interfaces help achieve multiple inheritance in Java, which is otherwise not possible using classes alone. 
+    The trainer explained the syntax, the <code>implements</code> keyword, and scenarios where interfaces are the preferred choice.</p>
+    <p>We also explored <strong>default methods</strong> in interfaces introduced in Java 8, which allow us to add new methods without breaking existing implementations.</p>
+    <p>Example discussed in class:</p>
+    <pre>
+interface Animal {
+    void sound();
+    default void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+
+public class TestInterface {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+        d.eat();
+    }
+}
+    </pre>
+</div>
+
+<div class="section">
+    <p class="time">10:00 AM - 12:00 PM</p>
+    <p>We practiced multiple exercises on interfaces, including designing a payment system with multiple payment methods like CreditCardPayment, UPI, and PayPal, all implementing a common Payment interface.</p>
+    <p>The trainer then introduced <strong>Functional Interfaces</strong> and the <code>@FunctionalInterface</code> annotation. 
+    We learned how they can
