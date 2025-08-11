@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Training - Day 24</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2E86C1; }
+        .section { margin-bottom: 20px; }
+        .time { font-weight: bold; color: #117A65; }
+    </style>
+</head>
+<body>
+
+<h1>Day 24 - 25 July 2024</h1>
+<h2>Java Development Industrial Training</h2>
+
+<div class="section">
+    <p class="time">08:00 AM - 10:00 AM</p>
+    <p>We shifted focus to <strong>Java Swing</strong> for building GUIs. I learned how to create JFrame, add components like JLabel, JButton, JTextField, and register event listeners for user interactions.</p>
+    <pre>
+import javax.swing.*;
+class MyFrame {
+    public static void main(String[] args) {
+        JFrame f = new JFrame("My First Frame");
+        JButton b = new JButton("Click Me");
+        b.setBounds(100, 100, 100, 50);
+        f.add(b);
+        f.setSize(400, 400);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+}
+    </pre>
+</div>
+
+<div class="section">
+    <p class="time">10:00 AM - 12:00 PM</p>
+    <p>I created a basic GUI for a login form. It has username and password fields with a login button. Upon clicking the button, validation is performed.</p>
+</div>
+
+<div class="section">
+    <h2>Conclusion</h2>
+    <p>Swing seems very versatile for building desktop applications. I will now work on combining Swing with JDBC for interactive database apps.</p>
+</div>
+
+</body>
+</html>
