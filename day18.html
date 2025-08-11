@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Training - Day 18</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2E86C1; }
+        .section { margin-bottom: 20px; }
+        .time { font-weight: bold; color: #117A65; }
+    </style>
+</head>
+<body>
+
+<h1>Day 18 - 17 July 2024</h1>
+<h2>Java Development Industrial Training</h2>
+
+<div class="section">
+    <p class="time">08:00 AM - 10:00 AM</p>
+    <p>The day started with learning about <strong>sorting collections</strong>. We studied the <code>Collections.sort()</code> method for Lists, and how natural ordering is determined via the <code>Comparable</code> interface.</p>
+    <p>We then explored the <code>Comparator</code> interface for custom sorting, such as sorting students by marks, names, or IDs.</p>
+    <pre>
+import java.util.*;
+class Student implements Comparable<Student> {
+    String name; int marks;
+    Student(String n, int m) { name = n; marks = m; }
+    public int compareTo(Student s) { return this.marks - s.marks; }
+}
+public class SortExample {
+    public static void main(String[] args) {
+        List<Student> list = new ArrayList<>();
+        list.add(new Student("Alice", 85));
+        list.add(new Student("Bob", 92));
+        Collections.sort(list);
+    }
+}
+    </pre>
+</div>
+
+<div class="section">
+    <p class="time">10:00 AM - 12:00 PM</p>
+    <p>Hands-on activities included:
+        <ul>
+            <li>Sorting strings alphabetically.</li>
+            <li>Sorting integers in descending order using a custom Comparator.</li>
+            <li>Sorting objects by multiple criteria.</li>
+        </ul>
+    </p>
+    <p>We also explored <strong>binary search</strong> in sorted collections and how to ensure data is in order before searching.</p>
+</div>
+
+<div class="section">
+    <h2>Reflection</h2>
+    <p>This session strengthened my ability to work with data in real projects, especially when results need to be displayed in a specific order. Tomorrow, we will dive into <strong>Java Exception Handling</strong>.</p>
+</div>
+
+</body>
+</html>
