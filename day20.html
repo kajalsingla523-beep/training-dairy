@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Training - Day 20</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2E86C1; }
+        .section { margin-bottom: 20px; }
+        .time { font-weight: bold; color: #117A65; }
+    </style>
+</head>
+<body>
+
+<h1>Day 20 - 19 July 2024</h1>
+<h2>Java Development Industrial Training</h2>
+
+<div class="section">
+    <p class="time">08:00 AM - 10:00 AM</p>
+    <p>Today's topic was <strong>Java File Handling</strong>. We learned about the <code>File</code> class in <code>java.io</code> package and how to create, read, and delete files using Java.</p>
+    <p>Example of creating a file:</p>
+    <pre>
+import java.io.*;
+public class FileCreate {
+    public static void main(String[] args) {
+        try {
+            File file = new File("example.txt");
+            if (file.createNewFile()) {
+                System.out.println("File created: " + file.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
+    </pre>
+</div>
+
+<div class="section">
+    <p class="time">10:00 AM - 12:00 PM</p>
+    <p>We also covered:
+        <ul>
+            <li>Reading data from a file using <code>FileReader</code> and <code>BufferedReader</code>.</li>
+            <li>Writing data using <code>FileWriter</code> and <code>BufferedWriter</code>.</li>
+            <li>Handling file-related exceptions.</li>
+        </ul>
+    </p>
+    <p>It was interesting to see how Java interacts with the file system, which is crucial for any application that stores persistent data.</p>
+</div>
+
+<div class="section">
+    <h2>Reflection</h2>
+    <p>I realized file handling is not just about reading and writing but also about ensuring proper resource management. Tomorrow we’ll move into serialization and deserialization.</p>
+</div>
+
+</body>
+</html>
