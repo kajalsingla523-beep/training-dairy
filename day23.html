@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Training - Day 23</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2E86C1; }
+        .section { margin-bottom: 20px; }
+        .time { font-weight: bold; color: #117A65; }
+    </style>
+</head>
+<body>
+
+<h1>Day 23 - 24 July 2024</h1>
+<h2>Java Development Industrial Training</h2>
+
+<div class="section">
+    <p class="time">08:00 AM - 10:00 AM</p>
+    <p>Today's focus was on <strong>ResultSet Metadata</strong> in JDBC. I learned how to get column names, types, and count dynamically from query results. 
+    This is extremely useful for building generic database applications.</p>
+    <pre>
+ResultSetMetaData rsmd = rs.getMetaData();
+int columnCount = rsmd.getColumnCount();
+for(int i = 1; i <= columnCount; i++) {
+    System.out.println(rsmd.getColumnName(i) + " - " + rsmd.getColumnTypeName(i));
+}
+    </pre>
+</div>
+
+<div class="section">
+    <p class="time">10:00 AM - 12:00 PM</p>
+    <p>I built a dynamic table viewer application that can display any table’s contents without hardcoding column names. 
+    This is a key step toward building reusable, database-agnostic tools.</p>
+</div>
+
+<div class="section">
+    <h2>Conclusion</h2>
+    <p>Learning about metadata makes JDBC much more flexible. I can now create admin tools without knowing the exact database structure in advance.</p>
+</div>
+
+</body>
+</html>
