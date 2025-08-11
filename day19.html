@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Training - Day 19</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2E86C1; }
+        .section { margin-bottom: 20px; }
+        .time { font-weight: bold; color: #117A65; }
+    </style>
+</head>
+<body>
+
+<h1>Day 19 - 18 July 2024</h1>
+<h2>Java Development Industrial Training</h2>
+
+<div class="section">
+    <p class="time">08:00 AM - 10:00 AM</p>
+    <p>We began learning about <strong>Java Exception Handling</strong>. The trainer explained the difference between checked, unchecked, and errors in Java. We explored common exceptions like <code>NullPointerException</code>, <code>ArrayIndexOutOfBoundsException</code>, and <code>IOException</code>.</p>
+    <p>We also studied the <code>try</code>, <code>catch</code>, <code>finally</code>, <code>throw</code>, and <code>throws</code> keywords.</p>
+    <pre>
+public class Example {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero!");
+        } finally {
+            System.out.println("Execution completed.");
+        }
+    }
+}
+    </pre>
+</div>
+
+<div class="section">
+    <p class="time">10:00 AM - 12:00 PM</p>
+    <p>We practiced:
+        <ul>
+            <li>Handling multiple exceptions.</li>
+            <li>Creating custom exception classes.</li>
+            <li>Using <code>throws</code> for checked exceptions in methods.</li>
+        </ul>
+    </p>
+    <p>The trainer emphasized that proper exception handling ensures program stability and better debugging.</p>
+</div>
+
+<div class="section">
+    <h2>Reflection</h2>
+    <p>I now understand how exceptions are an important part of Java’s robustne
