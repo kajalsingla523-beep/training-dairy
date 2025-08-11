@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Training - Day 21</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2E86C1; }
+        .section { margin-bottom: 20px; }
+        .time { font-weight: bold; color: #117A65; }
+    </style>
+</head>
+<body>
+
+<h1>Day 21 - 22 July 2024</h1>
+<h2>Java Development Industrial Training</h2>
+
+<div class="section">
+    <p class="time">08:00 AM - 10:00 AM</p>
+    <p>Today we learned about <strong>Java Serialization</strong> — the process of converting an object into a byte stream for storage or transmission.</p>
+    <p>We discussed the <code>Serializable</code> interface and how to mark classes for serialization.</p>
+    <pre>
+import java.io.*;
+class Student implements Serializable {
+    String name; int age;
+    Student(String n, int a) { name = n; age = a; }
+}
+public class SerializeExample {
+    public static void main(String[] args) {
+        try {
+            Student s1 = new Student("Alice", 22);
+            FileOutputStream fos = new FileOutputStream("student.ser");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(s1);
+            oos.close();
+            fos.close();
+            System.out.println("Object serialized.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+    </pre>
+</div>
+
+<div class="section">
+    <p class="time">10:00 AM - 12:00 PM</p>
+    <p>We then explored <strong>deserialization</strong> — converting the byte stream back into an object using <code>ObjectInputStream</code>.</p>
+    <p>We also discussed the concept of <code>transient</code> keyword to exclude certain fields from serialization.</p>
+</div>
+
+<div class="section">
+    <h2>Reflection</h2>
+    <p>Serialization is essential for saving objects' states in files or transferring them over a network. Tomorrow, we will move into multithreading in Java.</p>
+</div>
+
+</body>
+</html>
